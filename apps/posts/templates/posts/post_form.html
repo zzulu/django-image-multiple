@@ -1,0 +1,8 @@
+<h1>Post Create</h1>
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {{ image_formset.as_p }}
+  <input type="submit" value="Submit">
+</form>

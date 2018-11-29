@@ -1,0 +1,7 @@
+<h1>{{ post.content }}</h1>
+
+<ul>
+  {% for image in post.image_set.all %}
+    <li><img src="{{ image.file.url }}" alt=""></li>
+  {% endfor %}
+</ul>
