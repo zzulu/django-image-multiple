@@ -1,0 +1,9 @@
+<p>
+  <a href="{% url 'posts:create' %}">New</a>
+</p>
+
+<ul>
+  {% for post in posts %}
+    <li><a href="{% url 'posts:detail' post.pk %}">{{ post.content }}</a></li>
+  {% endfor %}
+</ul>

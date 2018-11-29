@@ -1,8 +1,14 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, DetailView
+from django.views.generic import ListView, CreateView, DetailView
 from .models import Post, Image
 from .forms import ImageForm, ImageFormSet
 from django.db import transaction
+
+
+class PostList(ListView):
+    model = Post
+    context_object_name = 'posts'
+
 
 class PostCreate(CreateView):
     model = Post
